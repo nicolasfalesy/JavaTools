@@ -1,7 +1,5 @@
 # Java Tools
-``` diff
-+ These are some extra tools for java that you can easily incorporate into your projects
-```
+These are some extra tools for java that you can easily incorporate into your projects
 
 ## Contents
  - Checking if an integer or double is valid

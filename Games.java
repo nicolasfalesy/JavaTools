@@ -1,5 +1,3 @@
-package Tools;
-
 import java.util.Scanner;
 
 public class Games {
@@ -58,7 +56,7 @@ public class Games {
         int numberRounds = -1;
 
         // asks how many rounds they would like to play and stores it
-        Printing.fancyText("\nHow many round would you like to play?: ", textSpeed, messageDelay);
+        Printing.fancyText("\nHow many rounds would you like to play?: ", textSpeed, messageDelay);
 
         // will loop until it gets a valid answer (greater than 0 and an integer)
         while (true) {

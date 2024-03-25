@@ -1,5 +1,3 @@
-package Tools;
-
 public class Randoms {
     /**
      * Generates a random integer between the given minimum and maximum values (inclusive).

@@ -1,5 +1,3 @@
-package Tools;
-
 public class Printing {
     /**
      * Prints the given message with a fancy effect.

@@ -1,5 +1,3 @@
-package Tools;
-
 public class MDArrays {
     
 	/**

@@ -1,3 +1,5 @@
+package java_tools;
+
 import java.util.*;
 
 public class CheckValid {
@@ -86,7 +88,7 @@ public class CheckValid {
      * @return The valid double input obtained from the scanner.
      * @throws InterruptedException If the thread is interrupted while sleeping.
      */
-    public static double getDoubleBetween(Scanner scanner, String instruction, int min, int max, int textSpeed) throws InterruptedException {
+    public static double getDoubleBetween(Scanner scanner, String instruction, double min, double max, int textSpeed) throws InterruptedException {
         while (true) {
             double num = validDouble(scanner, instruction);
 

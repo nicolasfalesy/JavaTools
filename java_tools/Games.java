@@ -1,3 +1,5 @@
+package java_tools;
+
 import java.util.Scanner;
 
 public class Games {
@@ -52,7 +54,7 @@ public class Games {
      */
     public static int numberRounds(int textSpeed, int messageDelay, Scanner userInput) throws InterruptedException {
         // initializes variables
-        String instruction = "\nInvalid answer, how many rounds would you like to play: ";
+        String instruction = "\nInvalid answer, how many rounds would you like to play?: ";
         int numberRounds = -1;
 
         // asks how many rounds they would like to play and stores it
@@ -136,4 +138,26 @@ public class Games {
 
         return input;
     } // ends collectNumber method
+
+    /**
+     * Prompts the user to input the number of players and returns the value.
+     *
+     * @param userInput The Scanner object used to get input from the user.
+     * @param textSpeed The speed at which text is printed to the console.
+     * @param msgDelay  The delay between messages printed to the console.
+     * @return The number of players entered by the user.
+     * @throws InterruptedException If the thread is interrupted while waiting.
+     */
+    public static int numberPlayers(Scanner userInput, int textSpeed, int msgDelay) throws InterruptedException {
+        // initializes variables
+        String instruction = "\nInvalid answer, how many people are playing?: ";
+        int numberPlayers = -1;
+
+        // asks how many players are playing and stores it
+        Printing.fancyText("\nHow many rounds would you like to play?: ", textSpeed, msgDelay);
+        // gets a valid answer (in between 1 and 10)
+        numberPlayers = CheckValid.getIntegerBetween(userInput, instruction, 1, 10, textSpeed);
+
+        return numberPlayers;
+    } // ends numberPlays method
 } // ends class

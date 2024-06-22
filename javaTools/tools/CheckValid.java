@@ -1,4 +1,4 @@
-package java_tools;
+package tools;
 
 import java.util.*;
 
@@ -9,9 +9,11 @@ public class CheckValid {
      *
      * @param scanner     The Scanner object used to retrieve input.
      * @param instruction The instruction message displayed when an invalid input is entered.
+     * @param textSpeed   The speed at which text is displayed.
      * @return The valid integer input obtained from the scanner.
+     * @throws InterruptedException If the thread is interrupted while sleeping.
      */
-    public static int validInteger(Scanner scanner, String instruction) {
+    public static int validInteger(Scanner scanner, String instruction, int textSpeed) throws InterruptedException {
         int validNumber = 0;
 
         // loops through until it finds a valid input
@@ -22,7 +24,8 @@ public class CheckValid {
                 break;
             } catch (InputMismatchException mismatch) {
                 scanner.nextLine();
-                System.out.print(instruction);
+                Printing.fancyText("\nTry again!\n", textSpeed, 0);
+                Printing.fancyText(instruction, textSpeed, 0);
             }
         } // ends while
         return validNumber;
@@ -65,8 +68,9 @@ public class CheckValid {
      * @throws InterruptedException If the thread is interrupted while sleeping.
      */
     public static int getIntegerBetween(Scanner scanner, String instruction, int min, int max, int textSpeed) throws InterruptedException {
+        Printing.fancyText(instruction, textSpeed, 0);
         while (true) {
-            int num = validInteger(scanner, instruction);
+            int num = validInteger(scanner, instruction, textSpeed);
 
             if (num > min-1 && num < max+1) {
                 return num;

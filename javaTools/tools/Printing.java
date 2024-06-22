@@ -1,4 +1,4 @@
-package java_tools;
+package tools;
 
 public class Printing {
     /**
